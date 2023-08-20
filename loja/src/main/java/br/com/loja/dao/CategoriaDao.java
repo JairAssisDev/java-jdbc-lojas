@@ -37,4 +37,10 @@ public class CategoriaDao {
 		String jpql = "SELECT c FROM Categoria c";
 		return em.createQuery(jpql, Categoria.class).getResultList();
 	}
+	public List<Categoria> buscarPorNome(String nome){
+		String jpql ="SELECT c FROM Categoria c WHERE c.nome = ?1";
+		return em.createQuery(jpql,Categoria.class).setParameter(1, nome)
+				.getResultList();
+	}
+	
 }
