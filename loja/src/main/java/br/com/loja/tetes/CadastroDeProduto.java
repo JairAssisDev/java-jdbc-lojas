@@ -32,7 +32,7 @@ public class CadastroDeProduto {
 		todos3.forEach(p5 -> System.out.println(p5.getNome()));
 
 		BigDecimal precoDoProduto = produtoDao.buscarPrecoDoProdutoComNome("Xiaomi Redmi");
-		System.out.println("Preco do Produto : " + precoDoProduto);
+		System.out.println("Preco do Produto: " + precoDoProduto);
 	}
 
 	private static void cadastrarProduto() {
