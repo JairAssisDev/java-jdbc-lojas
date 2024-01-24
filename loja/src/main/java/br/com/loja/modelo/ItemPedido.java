@@ -12,19 +12,16 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "itens_pedido")
 public class ItemPedido {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private BigDecimal precoUnitario;
 	private int quantidade;
-	
 	@ManyToOne
 	private Pedido pedido;
 	@ManyToOne
 	private Produto produto;
 	public ItemPedido(int quantidade, Pedido pedido, Produto produto) {
-		
 		this.quantidade = quantidade;
 		this.pedido = pedido;
 		this.precoUnitario = produto.getPreco();
